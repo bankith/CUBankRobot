@@ -7,3 +7,6 @@ Resource    ../../../testdata/test_data.robot
 
 
 *** Keywords ***
+Initialize System
+    Open Browser    ${WEB_URL}    ${WEB_BROWSER} 
+    Maximize Browser Window
