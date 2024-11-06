@@ -21,4 +21,10 @@ Register Success
     Input text    //*[@id="firstName"]    ${firstName}
     Input text   //*[@id="lastName"]    ${lastName}
     Click Element    //*[@id="root"]/div/div/div/form/button
-    
+
+Login Success
+    Wait Until Element Contains    //*[@id="root"]/div/div/div/h2    Login 
+    Input text    //*[@id="accountId"]    ${accountNumber}
+    Input Password    //*[@id="password"]    ${password} 
+    Click Element    //*[@id="root"]/div/div/div/form/button
+    Wait Until Element Contains   //*[@id="root"]/div/div/div/div[2]/article/h2[1]    Account ID:    5s
