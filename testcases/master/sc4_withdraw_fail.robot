@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ../../keywords/ui/common/opalCommonKeywords.robot
 Suite Setup    Initialize System
-Library    XML
 
 *** Variables ***
 
