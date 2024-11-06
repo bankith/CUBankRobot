@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.3 on darwin)" generated="2024-11-06T22:11:50.869269" rpa="false" schemaversion="5">
+<suite id="s1" name="Sc1 Register Fail" source="/Users/admin/Documents/2024/SE/SW Test/CUBankRobot/testcases/master/sc1_register_fail.robot">
+<kw name="Initialize System" owner="opalCommonKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:50.972353" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<arg>${WEB_URL}</arg>
+<arg>${WEB_BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-06T22:11:50.972211" elapsed="1.335793"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.308787" elapsed="0.360576"/>
+</kw>
+<status status="PASS" start="2024-11-06T22:11:50.971745" elapsed="1.697716"/>
+</kw>
+<test id="s1-t1" name="SC_1_1_Account_Number_Not_Integer" line="13">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>//*[@id="root"]/div/nav/div/a[2]</arg>
+<arg>Register</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.669856" elapsed="0.013266"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:52.683461" level="INFO">Clicking element '//*[@id="root"]/div/nav/div/a[2]'.</msg>
+<arg>//*[@id="root"]/div/nav/div/a[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.683318" elapsed="0.027939"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:52.711626" level="INFO">Typing text '123456789X' into text field '//*[@id="accountId"]'.</msg>
+<arg>//*[@id="accountId"]</arg>
+<arg>123456789X</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.711465" elapsed="0.103505"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:52.815329" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg time="2024-11-06T22:11:52.832045" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//*[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.815153" elapsed="0.036276"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:52.851815" level="INFO">Typing text 'Kritsada' into text field '//*[@id="firstName"]'.</msg>
+<arg>//*[@id="firstName"]</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.851624" elapsed="0.034276"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:52.886267" level="INFO">Typing text 'Hongsasurath' into text field '//*[@id="lastName"]'.</msg>
+<arg>//*[@id="lastName"]</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.886088" elapsed="0.038406"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:52.924845" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.924699" elapsed="0.023898"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:52.948959" level="INFO">Verifying element '//*[@id="root"]/div/div/div/form/div/label' contains exact text 'Your account ID should contain numbers only.'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/div/label</arg>
+<arg>Your account ID should contain numbers only.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.948801" elapsed="0.012049"/>
+</kw>
+<status status="PASS" start="2024-11-06T22:11:52.669557" elapsed="0.291484"/>
+</test>
+<test id="s1-t2" name="SC_1_2_Account_Number_Digits_Grater_Than_10" line="23">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:52.961832" level="INFO">Typing text '12345678901' into text field '//*[@id="accountId"]'.</msg>
+<arg>//*[@id="accountId"]</arg>
+<arg>12345678901</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:52.961657" elapsed="0.063472"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.025507" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.025320" elapsed="0.046014"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.071714" level="INFO">Verifying element '//*[@id="root"]/div/div/div/form/div/label' contains exact text 'Your account ID must be exactly 10 digits long.'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/div/label</arg>
+<arg>Your account ID must be exactly 10 digits long.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.071545" elapsed="0.015157"/>
+</kw>
+<status status="PASS" start="2024-11-06T22:11:52.961334" elapsed="0.125608"/>
+</test>
+<test id="s1-t3" name="SC_1_3_Account_Number_Digits_Less_Than_10" line="28">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.087459" level="INFO">Typing text '123456789' into text field '//*[@id="accountId"]'.</msg>
+<arg>//*[@id="accountId"]</arg>
+<arg>123456789</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.087317" elapsed="0.044950"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.132890" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.132455" elapsed="0.023216"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.156392" level="INFO">Verifying element '//*[@id="root"]/div/div/div/form/div/label' contains exact text 'Your account ID must be exactly 10 digits long.'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/div/label</arg>
+<arg>Your account ID must be exactly 10 digits long.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.156192" elapsed="0.009908"/>
+</kw>
+<status status="PASS" start="2024-11-06T22:11:53.087103" elapsed="0.079161"/>
+</test>
+<test id="s1-t4" name="SC_1_4_Account_Number_Already_In_System" line="33">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.166743" level="INFO">Typing text '1111111111' into text field '//*[@id="accountId"]'.</msg>
+<arg>//*[@id="accountId"]</arg>
+<arg>1111111111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.166614" elapsed="0.038218"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.205259" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.205031" elapsed="0.018129"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.224117" level="INFO">Verifying element '//*[@id="root"]/div/div/div/form/div/label' contains exact text 'This account ID is already in use. Please choose another.'.</msg>
+<msg time="2024-11-06T22:11:53.353302" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-06T22:11:53.353418" level="FAIL">The text of element '//*[@id="root"]/div/div/div/form/div/label' should have been 'This account ID is already in use. Please choose another.' but it was 'Your account ID must be exactly 10 digits long.'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/div/label</arg>
+<arg>This account ID is already in use. Please choose another.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="FAIL" start="2024-11-06T22:11:53.223748" elapsed="0.131271">The text of element '//*[@id="root"]/div/div/div/form/div/label' should have been 'This account ID is already in use. Please choose another.' but it was 'Your account ID must be exactly 10 digits long.'.</status>
+</kw>
+<status status="FAIL" start="2024-11-06T22:11:53.166397" elapsed="0.188785">The text of element '//*[@id="root"]/div/div/div/form/div/label' should have been 'This account ID is already in use. Please choose another.' but it was 'Your account ID must be exactly 10 digits long.'.</status>
+</test>
+<test id="s1-t5" name="SC_1_5_Password_Not_Integer" line="38">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.355740" level="INFO">Typing text '1234567890' into text field '//*[@id="accountId"]'.</msg>
+<arg>//*[@id="accountId"]</arg>
+<arg>${accountNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.355595" elapsed="0.047980"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.403953" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg time="2024-11-06T22:11:53.422807" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//*[@id="password"]</arg>
+<arg>ABCD</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.403796" elapsed="0.039654"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.443780" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.443639" elapsed="0.018542"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.462501" level="INFO">Verifying element '//*[@id="root"]/div/div/div/form/div/label' contains exact text 'Your password should contain numbers only.'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/div/label</arg>
+<arg>Your password should contain numbers only.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.462362" elapsed="0.009520"/>
+</kw>
+<status status="PASS" start="2024-11-06T22:11:53.355348" elapsed="0.116723"/>
+</test>
+<test id="s1-t6" name="SC_1_6_Password_Digits_Grater_Than_4" line="44">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.472803" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg time="2024-11-06T22:11:53.486466" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//*[@id="password"]</arg>
+<arg>12345</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.472663" elapsed="0.055315"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.528337" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.528167" elapsed="0.018556"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.547110" level="INFO">Verifying element '//*[@id="root"]/div/div/div/form/div/label' contains exact text 'Your password must be exactly 4 digits long.'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/div/label</arg>
+<arg>Your password must be exactly 4 digits long.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.546954" elapsed="0.010335"/>
+</kw>
+<status status="PASS" start="2024-11-06T22:11:53.472426" elapsed="0.085023"/>
+</test>
+<test id="s1-t7" name="SC_1_7_Password_Digits_Less_Than_4" line="49">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.557898" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg time="2024-11-06T22:11:53.572619" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//*[@id="password"]</arg>
+<arg>123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.557777" elapsed="0.034468"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.592548" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.592419" elapsed="0.025711"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.618579" level="INFO">Verifying element '//*[@id="root"]/div/div/div/form/div/label' contains exact text 'Your password must be exactly 4 digits long.'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/div/label</arg>
+<arg>Your password must be exactly 4 digits long.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.618383" elapsed="0.012395"/>
+</kw>
+<status status="PASS" start="2024-11-06T22:11:53.557574" elapsed="0.073431"/>
+</test>
+<test id="s1-t8" name="SC_1_8_FullName_Char_Grater_Than_30" line="54">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.631548" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg time="2024-11-06T22:11:53.648151" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//*[@id="password"]</arg>
+<arg>1234</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.631393" elapsed="0.035837"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.667635" level="INFO">Typing text 'Kritsadaaaaaaa' into text field '//*[@id="firstName"]'.</msg>
+<arg>//*[@id="firstName"]</arg>
+<arg>Kritsadaaaaaaa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.667461" elapsed="0.049367"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.717196" level="INFO">Typing text 'Hongsasurathhhhhhhh' into text field '//*[@id="lastName"]'.</msg>
+<arg>//*[@id="lastName"]</arg>
+<arg>Hongsasurathhhhhhhh</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.717041" elapsed="0.048549"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.765966" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.765812" elapsed="0.021089"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.787231" level="INFO">Verifying element '//*[@id="root"]/div/div/div/form/div/label' contains exact text 'Your fullname must be 30 characters or less, including spaces.'.</msg>
+<msg time="2024-11-06T22:11:53.924439" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-06T22:11:53.924532" level="FAIL">The text of element '//*[@id="root"]/div/div/div/form/div/label' should have been 'Your fullname must be 30 characters or less, including spaces.' but it was 'The combined length of your first and last name must not exceed 30 characters.'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/div/label</arg>
+<arg>Your fullname must be 30 characters or less, including spaces.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="FAIL" start="2024-11-06T22:11:53.787087" elapsed="0.137536">The text of element '//*[@id="root"]/div/div/div/form/div/label' should have been 'Your fullname must be 30 characters or less, including spaces.' but it was 'The combined length of your first and last name must not exceed 30 characters.'.</status>
+</kw>
+<status status="FAIL" start="2024-11-06T22:11:53.631163" elapsed="0.293608">The text of element '//*[@id="root"]/div/div/div/form/div/label' should have been 'Your fullname must be 30 characters or less, including spaces.' but it was 'The combined length of your first and last name must not exceed 30 characters.'.</status>
+</test>
+<test id="s1-t9" name="SC_1_8_FullName_Char_Empty" line="61">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.925288" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg time="2024-11-06T22:11:53.941265" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//*[@id="password"]</arg>
+<arg>1234</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.925163" elapsed="0.034656"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>//*[@id="firstName"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.960009" elapsed="0.015336"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>//*[@id="lastName"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.975530" elapsed="0.014669"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:53.990547" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T22:11:53.990408" elapsed="0.017326"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T22:11:54.008083" level="INFO">Verifying element '//*[@id="root"]/div/div/div/form/div/label' contains exact text 'Your fullname must be 30 characters or less, including spaces.'.</msg>
+<msg time="2024-11-06T22:11:54.567854" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-06T22:11:54.567954" level="FAIL">The text of element '//*[@id="root"]/div/div/div/form/div/label' should have been 'Your fullname must be 30 characters or less, including spaces.' but it was 'The combined length of your first and last name must not exceed 30 characters.'.</msg>
+<arg>//*[@id="root"]/div/div/div/form/div/label</arg>
+<arg>Your fullname must be 30 characters or less, including spaces.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="FAIL" start="2024-11-06T22:11:54.007938" elapsed="0.560100">The text of element '//*[@id="root"]/div/div/div/form/div/label' should have been 'Your fullname must be 30 characters or less, including spaces.' but it was 'The combined length of your first and last name must not exceed 30 characters.'.</status>
+</kw>
+<status status="FAIL" start="2024-11-06T22:11:53.924945" elapsed="0.643240">The text of element '//*[@id="root"]/div/div/div/form/div/label' should have been 'Your fullname must be 30 characters or less, including spaces.' but it was 'The combined length of your first and last name must not exceed 30 characters.'.</status>
+</test>
+<test id="s1-t10" name="Close Browser" line="68">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-06T22:11:56.569159" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-06T22:11:54.568523" elapsed="2.000860"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-06T22:11:56.569854" elapsed="0.111861"/>
+</kw>
+<status status="PASS" start="2024-11-06T22:11:54.568325" elapsed="2.113582"/>
+</test>
+<status status="FAIL" start="2024-11-06T22:11:50.870554" elapsed="5.811652"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="3" skip="0" id="s1" name="Sc1 Register Fail">Sc1 Register Fail</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
