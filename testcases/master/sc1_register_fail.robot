@@ -1,6 +1,5 @@
 *** Settings ***
 Resource    ../../keywords/ui/common/opalCommonKeywords.robot
-
 Suite Setup    Initialize System
 
 *** Variables ***
@@ -58,7 +57,7 @@ SC_1_8_FullName_Char_Grater_Than_30
     Click Element    //*[@id="root"]/div/div/div/form/button
     Element Text Should Be    //*[@id="root"]/div/div/div/form/div/label    Your fullname must be 30 characters or less, including spaces.
 
-SC_1_8_FullName_Char_Empty
+SC_1_9_FullName_Char_Empty
     Input Password    //*[@id="password"]    1234
     Clear Element Text    //*[@id="firstName"]    
     Clear Element Text   //*[@id="lastName"]
