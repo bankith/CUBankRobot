@@ -5,14 +5,14 @@ Suite Setup    Initialize System
 *** Variables ***
 
 *** Test Cases ***
+Initial
+    Login Success
 # SC_3_1_Amount_Deposit_Not_Integer
-#     Login Success
 #     Element Should Not Contain    //*[@id="root"]/div/nav/div/a[1]    LOGIN  
 #     Element Should Not Contain    //*[@id="root"]/div/nav/div/a[2]    Register  
 #     Element Should Contain    //*[@id="root"]/div/nav/div/a[2]    LOG OUT  
 
 SC_3_2_Amount_Deposit_Less_Than_Or_Equal_0
-    Login Success
     Element Should Not Contain    //*[@id="root"]/div/nav/div/a[1]    LOGIN  
     Element Should Not Contain    //*[@id="root"]/div/nav/div/a[2]    Register  
     Element Should Contain    //*[@id="root"]/div/nav/div/a[2]    LOG OUT

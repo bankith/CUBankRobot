@@ -1,126 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.3 on darwin)" generated="2024-11-06T23:07:51.804755" rpa="false" schemaversion="5">
-<suite id="s1" name="Sc3 Deposit Fail" source="/Users/admin/Documents/2024/SE/SW Test/CUBankRobot/testcases/master/sc3_deposit_fail.robot">
+<robot generator="Robot 7.0 (Python 3.10.3 on darwin)" generated="2024-11-06T23:41:40.565247" rpa="false" schemaversion="5">
+<suite id="s1" name="Sc4 Withdraw Fail" source="/Users/admin/Documents/2024/SE/SW Test/CUBankRobot/testcases/master/sc4_withdraw_fail.robot">
 <kw name="Initialize System" owner="opalCommonKeywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:51.885580" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<msg time="2024-11-06T23:41:40.672694" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
 <arg>${WEB_URL}</arg>
 <arg>${WEB_BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-06T23:07:51.885406" elapsed="0.841396"/>
+<status status="PASS" start="2024-11-06T23:41:40.672291" elapsed="1.540750"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-06T23:07:52.728629" elapsed="0.873450"/>
+<status status="PASS" start="2024-11-06T23:41:42.213517" elapsed="0.358994"/>
 </kw>
-<status status="PASS" start="2024-11-06T23:07:51.885004" elapsed="1.717199"/>
+<status status="PASS" start="2024-11-06T23:41:40.671763" elapsed="1.900873"/>
 </kw>
-<test id="s1-t1" name="SC_3_2_Amount_Deposit_Less_Than_Or_Equal_0" line="14">
+<test id="s1-t1" name="Initial" line="9">
 <kw name="Login Success" owner="opalCommonKeywords">
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>//*[@id="root"]/div/div/div/h2</arg>
 <arg>Login</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2024-11-06T23:07:53.602985" elapsed="0.014672"/>
+<status status="PASS" start="2024-11-06T23:41:42.573297" elapsed="0.016254"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:53.617995" level="INFO">Typing text '1111111111' into text field '//*[@id="accountId"]'.</msg>
+<msg time="2024-11-06T23:41:42.589915" level="INFO">Typing text '1111111111' into text field '//*[@id="accountId"]'.</msg>
 <arg>//*[@id="accountId"]</arg>
 <arg>${accountNumber}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-06T23:07:53.617815" elapsed="0.104081"/>
+<status status="PASS" start="2024-11-06T23:41:42.589709" elapsed="0.102685"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:53.722205" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
-<msg time="2024-11-06T23:07:53.738967" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-11-06T23:41:42.692823" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg time="2024-11-06T23:41:42.713503" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>//*[@id="password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-06T23:07:53.722036" elapsed="0.035739"/>
+<status status="PASS" start="2024-11-06T23:41:42.692567" elapsed="0.041014"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:53.758063" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
+<msg time="2024-11-06T23:41:42.733955" level="INFO">Clicking element '//*[@id="root"]/div/div/div/form/button'.</msg>
 <arg>//*[@id="root"]/div/div/div/form/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-06T23:07:53.757923" elapsed="0.035363"/>
+<status status="PASS" start="2024-11-06T23:41:42.733792" elapsed="0.028165"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>//*[@id="root"]/div/div/div/div[2]/article/h2[1]</arg>
 <arg>Account ID:</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2024-11-06T23:07:53.793513" elapsed="0.218102"/>
+<status status="PASS" start="2024-11-06T23:41:42.762194" elapsed="0.219878"/>
 </kw>
-<status status="PASS" start="2024-11-06T23:07:53.602793" elapsed="0.408911"/>
+<status status="PASS" start="2024-11-06T23:41:42.573131" elapsed="0.409128"/>
 </kw>
-<kw name="Element Should Not Contain" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:54.020432" level="INFO">Element '//*[@id="root"]/div/nav/div/a[1]' does not contain text 'LOGIN'.</msg>
-<arg>//*[@id="root"]/div/nav/div/a[1]</arg>
-<arg>LOGIN</arg>
-<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
-<status status="PASS" start="2024-11-06T23:07:54.011840" elapsed="0.008648"/>
-</kw>
-<kw name="Element Should Not Contain" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:54.028576" level="INFO">Element '//*[@id="root"]/div/nav/div/a[2]' does not contain text 'Register'.</msg>
-<arg>//*[@id="root"]/div/nav/div/a[2]</arg>
-<arg>Register</arg>
-<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
-<status status="PASS" start="2024-11-06T23:07:54.020629" elapsed="0.007998"/>
-</kw>
-<kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:54.034974" level="INFO">Element '//*[@id="root"]/div/nav/div/a[2]' contains text 'LOG OUT'.</msg>
-<arg>//*[@id="root"]/div/nav/div/a[2]</arg>
-<arg>LOG OUT</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2024-11-06T23:07:54.028755" elapsed="0.006265"/>
-</kw>
+<kw name="Deposit Success" owner="opalCommonKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:54.035249" level="INFO">Typing text '0' into text field '//*[@id="amount"]'.</msg>
-<arg>//*[@id="amount"]</arg>
-<arg>0</arg>
+<msg time="2024-11-06T23:41:42.982896" level="INFO">Typing text '100' into text field 'xpath=/html/body/div/div/div/div/div[3]/div[2]/form/label/input'.</msg>
+<arg>xpath=/html/body/div/div/div/div/div[3]/div[2]/form/label/input</arg>
+<arg>${deposite}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-06T23:07:54.035143" elapsed="0.036131"/>
+<status status="PASS" start="2024-11-06T23:41:42.982735" elapsed="0.039238"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:54.071773" level="INFO">Clicking element '//*[@id="root"]/div/div/div/div[3]/div[2]/form/button'.</msg>
+<msg time="2024-11-06T23:41:43.022295" level="INFO">Clicking element '//*[@id="root"]/div/div/div/div[3]/div[2]/form/button'.</msg>
 <arg>//*[@id="root"]/div/div/div/div[3]/div[2]/form/button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-06T23:07:54.071615" elapsed="0.025735"/>
+<status status="PASS" start="2024-11-06T23:41:43.022145" elapsed="0.025547"/>
+</kw>
+<status status="PASS" start="2024-11-06T23:41:42.982528" elapsed="0.065253"/>
+</kw>
+<status status="PASS" start="2024-11-06T23:41:42.572774" elapsed="0.475152"/>
+</test>
+<test id="s1-t2" name="SC_4_2_Amount_Withdrawal_Not_Integer" line="15">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T23:41:43.048623" level="INFO">Typing text '50.5' into text field 'xpath=/html/body/div/div/div/div/div[4]/div[2]/form/label/input'.</msg>
+<arg>xpath=/html/body/div/div/div/div/div[4]/div[2]/form/label/input</arg>
+<arg>50.5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T23:41:43.048460" elapsed="0.085938"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T23:41:43.134842" level="INFO">Clicking element '//*[@id="root"]/div/div/div/div[4]/div[2]/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/div[4]/div[2]/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T23:41:43.134660" elapsed="0.026475"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-11-06T23:07:54.097800" level="INFO">Verifying element '//*[@id="root"]/div/div/div/div[3]/div[2]/form/div/label' contains exact text 'The amount must be greater than 0. Please enter a positive number.'.</msg>
-<arg>//*[@id="root"]/div/div/div/div[3]/div[2]/form/div/label</arg>
+<msg time="2024-11-06T23:41:43.161306" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-11-06T23:41:43.161578" level="INFO">Verifying element '//*[@id="root"]/div/div/div/div[4]/div[2]/form/div/label' contains exact text 'The balance amount must be a whole number with no decimals.'.</msg>
+<msg time="2024-11-06T23:41:43.371023" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-06T23:41:43.371179" level="FAIL">Element with locator '//*[@id="root"]/div/div/div/div[4]/div[2]/form/div/label' not found.</msg>
+<arg>//*[@id="root"]/div/div/div/div[4]/div[2]/form/div/label</arg>
+<arg>The balance amount must be a whole number with no decimals.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="FAIL" start="2024-11-06T23:41:43.161348" elapsed="0.211867">Element with locator '//*[@id="root"]/div/div/div/div[4]/div[2]/form/div/label' not found.</status>
+</kw>
+<status status="FAIL" start="2024-11-06T23:41:43.048197" elapsed="0.325224">Element with locator '//*[@id="root"]/div/div/div/div[4]/div[2]/form/div/label' not found.</status>
+</test>
+<test id="s1-t3" name="SC_4_3_Amount_Withdrawal_AmountWithdraw_Less_Than_Or_Equal_0" line="20">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T23:41:43.373944" level="INFO">Typing text '0' into text field 'xpath=/html/body/div/div/div/div/div[4]/div[2]/form/label/input'.</msg>
+<arg>xpath=/html/body/div/div/div/div/div[4]/div[2]/form/label/input</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T23:41:43.373803" elapsed="0.033231"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T23:41:43.407453" level="INFO">Clicking element '//*[@id="root"]/div/div/div/div[4]/div[2]/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/div[4]/div[2]/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T23:41:43.407231" elapsed="0.024966"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T23:41:43.432364" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-11-06T23:41:43.432762" level="INFO">Verifying element '//*[@id="root"]/div/div/div/div[4]/div[2]/form/div/label' contains exact text 'The amount must be greater than 0. Please enter a positive number.'.</msg>
+<arg>//*[@id="root"]/div/div/div/div[4]/div[2]/form/div/label</arg>
 <arg>The amount must be greater than 0. Please enter a positive number.</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-11-06T23:07:54.097605" elapsed="0.011618"/>
+<status status="PASS" start="2024-11-06T23:41:43.432403" elapsed="0.012279"/>
 </kw>
-<status status="PASS" start="2024-11-06T23:07:53.602344" elapsed="0.507051"/>
+<status status="PASS" start="2024-11-06T23:41:43.373565" elapsed="0.071391"/>
 </test>
-<test id="s1-t2" name="Close Browser" line="23">
+<test id="s1-t4" name="SC_4_4_Amount_Withdrawal_AmountWithdraw_Grater_Than_Balance" line="25">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-06T23:41:43.445545" level="INFO">Typing text '99999999999' into text field 'xpath=/html/body/div/div/div/div/div[4]/div[2]/form/label/input'.</msg>
+<arg>xpath=/html/body/div/div/div/div/div[4]/div[2]/form/label/input</arg>
+<arg>99999999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T23:41:43.445406" elapsed="0.042438"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-06T23:41:43.488208" level="INFO">Clicking element '//*[@id="root"]/div/div/div/div[4]/div[2]/form/button'.</msg>
+<arg>//*[@id="root"]/div/div/div/div[4]/div[2]/form/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-06T23:41:43.488049" elapsed="0.023125"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-06T23:41:43.511370" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-11-06T23:41:43.511833" level="INFO">Verifying element '//*[@id="root"]/div/div/div/div[4]/div[2]/form/div/label' contains exact text 'Your balance is not enough to complete the withdrawal.'.</msg>
+<arg>//*[@id="root"]/div/div/div/div[4]/div[2]/form/div/label</arg>
+<arg>Your balance is not enough to complete the withdrawal.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-06T23:41:43.511455" elapsed="0.012987"/>
+</kw>
+<status status="PASS" start="2024-11-06T23:41:43.445132" elapsed="0.079479"/>
+</test>
+<test id="s1-t5" name="Close Browser" line="30">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-06T23:07:56.110477" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-11-06T23:41:45.527938" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-06T23:07:54.109741" elapsed="2.000818"/>
+<status status="PASS" start="2024-11-06T23:41:43.524949" elapsed="2.003817"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-06T23:07:56.110730" elapsed="0.080194"/>
+<status status="PASS" start="2024-11-06T23:41:45.530915" elapsed="0.094103"/>
 </kw>
-<status status="PASS" start="2024-11-06T23:07:54.109549" elapsed="2.081545"/>
+<status status="PASS" start="2024-11-06T23:41:43.524747" elapsed="2.100451"/>
 </test>
-<status status="PASS" start="2024-11-06T23:07:51.805522" elapsed="4.385823"/>
+<status status="FAIL" start="2024-11-06T23:41:40.566214" elapsed="5.059290"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Sc3 Deposit Fail">Sc3 Deposit Fail</stat>
+<stat pass="4" fail="1" skip="0" id="s1" name="Sc4 Withdraw Fail">Sc4 Withdraw Fail</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-11-06T23:41:43.161306" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-11-06T23:41:43.432364" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2024-11-06T23:41:43.511370" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
 </errors>
 </robot>
