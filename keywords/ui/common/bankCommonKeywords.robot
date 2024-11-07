@@ -27,13 +27,18 @@ Submit Pay Bill
     Set Suite Variable   ${BALANCE_ORIGINAL}   ${balance}
     Click Element  //*[@id="root"]/div/div/div/div[6]/div[2]/form/button
 
-Balance Will Be Decreased
+Balance Will Be Decreased By ${pay_amount}
     sleep    ${1} 
     ${balance}    Get Text    //*[@id="root"]/div/div/div/div[2]/article/h1[3]
-    Should Be Equal  ${${BALANCE_ORIGINAL} - ${PAY_BILL_AMOUNT}}   ${${balance}}
+    Should Be Equal  ${${BALANCE_ORIGINAL} - ${pay_amount}}   ${${balance}}
 
 
 
 Check Current Balance
     ${balance}   Get Text    //*[@id="root"]/div/div/div/div[2]/article/h1[3]
     Set Suite Variable   ${BALANCE_ORIGINAL}   ${balance}
+
+Submit Transfer
+    Check Current Balance
+    Click Element  //*[@id="root"]/div/div/div/div[5]/div[2]/form/button
+    Sleep  ${0.5}

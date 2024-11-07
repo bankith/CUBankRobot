@@ -14,10 +14,6 @@ Initialize System And Login
     When Submit Login
     Then Enter Account Page
 
-
-
-
-*** Keywords ***
 Set UserName And Password
     [Arguments]     ${username}   ${password}
     Set Suite Variable  ${USERNAME}  ${username}
@@ -33,3 +29,13 @@ Submit Login
     
 Enter Account Page  
     Wait Until Element Contains     //*[@id="root"]/div/div/div/div[2]/article/h2[1]    Account
+
+Deposit With Amount ${amount}
+    Input text       //*[@id="root"]/div/div/div/div[3]/div[2]/form/label/input    ${amount}
+    Click Button    //*[@id="root"]/div/div/div/div[3]/div[2]/form/button
+
+Withdraw With Amount ${amount}
+    Input text       //*[@id="root"]/div/div/div/div[4]/div[2]/form/label/input    ${amount}
+    Click Element    //*[@id="root"]/div/div/div/div[4]/div[2]/form/button
+
+    

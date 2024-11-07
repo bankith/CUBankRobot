@@ -11,17 +11,17 @@ BP_VD_01 Paying Bill With Selecting Water Option Should Succeed
     Given Click Water Bill 
     AND Set Bill Paying Amount  ${PAY_BILL_AMOUNT}
     When Submit Pay Bill
-    Then Balance Will Be Decreased
+    Then Balance Will Be Decreased By ${PAY_BILL_AMOUNT}
 
 BP_VD_02 Paying Bill With Selecting Electric Option Should Succeed
     Given Click Electric Bill 
     AND Set Bill Paying Amount  ${PAY_BILL_AMOUNT}
     When Submit Pay Bill
-    Then Balance Will Be Decreased
+    Then Balance Will Be Decreased By ${PAY_BILL_AMOUNT}
 
 BP_VD_03 Paying Bill With Selecting Mobile Option Should Succeed
     Given Click Mobile Bill 
     AND Set Bill Paying Amount  ${PAY_BILL_AMOUNT}
     When Submit Pay Bill
-    Then Balance Will Be Decreased
+    Then Balance Will Be Decreased By ${PAY_BILL_AMOUNT}
 

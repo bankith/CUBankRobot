@@ -9,13 +9,17 @@ ${BALANCE_ORIGINAL}     ${0}
 
 
 *** Test Cases ***
+# BP_IV_01 Paying Bill With Selecting Other Option Should Fail
+
+# BP_IV_02 Paying Bill With None Selecting Option Should Fail
+
+# BP_IV_03 Paying Bill With Selecting Water And Eletric Option Should Fail
+
 BP_IV_04 Amount Payment Is ABC Should Fail
     Given Click Water Bill 
     AND Set Bill Paying Amount  ABC
     When Submit Pay Bill
     Then Bill Payment Error Message Should Be  Invalid balance amount. Please enter a valid number.
-    # sleep  ${10}
-    # Then Balance Will Be Decreased
 
 BP_IV_05 Amount Payment Is Decimal Should Fail
     Given Click Mobile Bill 
