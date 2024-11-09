@@ -2,9 +2,15 @@
 Resource    ../../keywords/ui/common/cubankCommonKeywords.robot
 Resource    ../../keywords/ui/common/bankCommonKeywords.robot
 Test Setup     Run Keywords                 Initialize System And Login   AND
+...             Sleep  ${0.5}  AND
 ...             Deposit With Amount 100   AND
-...             Withdraw With Amount 100
-Test Teardown    Run Keyword If Test Failed    Capture Page Screenshot
+...             Sleep  ${0.5}  AND
+...             Withdraw With Amount 100  AND
+...             Sleep  ${0.5}  
+
+Test Teardown    Run Keywords  
+...    Run Keyword If Test Failed  Capture Page Screenshot   AND
+...    Close Browser
 
 *** Variables ***
 

@@ -4,6 +4,7 @@ Resource   ../../keywords/ui/common/bankCommonKeywords.robot
 Suite Setup     Run Keywords     
 ...             Initialize System And Login   
 # ...             AND Deposit With 100
+Test Setup      Sleep  ${0.5}
 Test Teardown    Run Keyword If Test Failed    Capture Page Screenshot
 
 *** Variables ***
@@ -16,6 +17,6 @@ TF_VD_01
     
 
 *** Keywords ***
-Set Transfer To ${to} With Amount ${amount}
+Set Transfer To ${to} With Amount ${amount}    
     Input Text  //*[@id="accountId"]  ${to}
     Input Text  //*[@id="root"]/div/div/div/div[5]/div[2]/form/div[2]/label/input  ${amount}

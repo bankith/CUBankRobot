@@ -1,10 +1,11 @@
 *** Settings ***
 Resource    ../../keywords/ui/common/cubankCommonKeywords.robot
 Resource   ../../keywords/ui/common/bankCommonKeywords.robot
-
-Suite Setup           Initialize System And Login
-Test Teardown    Run Keyword If Test Failed    Capture Page Screenshot
-
+Test Setup     Run Keywords                 Initialize System And Login   AND
+...            Sleep  ${0.5}
+Test Teardown    Run Keywords  
+...    Run Keyword If Test Failed  Capture Page Screenshot   AND
+...    Close Browser
 
 *** Test Cases ***
 BP_VD_01 Paying Bill With Selecting Water Option Should Succeed
